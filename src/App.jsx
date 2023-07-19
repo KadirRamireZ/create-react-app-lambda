@@ -52,11 +52,12 @@ const App = () => {
     return (
         <div className="app">
             <h1>Lista de tareas</h1>
-            <p>Total de tareas: {counter}</p>
+            <p>Tareas Completadas: {counter}</p>
             <AddTask onAdd={addTask} />
             <TaskList tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />
         </div>
     );
 };
+
 
 export default App;
