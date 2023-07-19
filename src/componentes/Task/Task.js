@@ -5,15 +5,20 @@ const Task = ({ task, onDelete, onToggle }) => {
 
   return (
     <div className={`task ${completed ? "completed" : ""}`}>
-      <label>
-        <input
-          type="checkbox"
-          checked={completed}
-          onChange={() => onToggle(id)}
-        />
-        {text}
-      </label>
-      <button onClick={() => onDelete(id)}>Eliminar</button>
+      <input
+        className="task-checkbox"
+        type="checkbox"
+        checked={completed}
+        onChange={() => onToggle(id)}
+      />
+      <label className="task-label">{text}</label>
+      <button
+        className="task-delete-button"
+        onClick={() => onDelete(id)}
+        title="Eliminar tarea"
+      >
+        &times;
+      </button>
     </div>
   );
 };
